@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ServiceMeet</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div id="logo">ServiceMeet</div>
+      <ul class="header-right">
+        <li><%= link_to "トップ", root_path %></li>
+        <!-- newアクションへのパスを書き直してください -->
+        <li><%= link_to "新規投稿", new_note_path %></li>
+        <li><%= link_to "投稿一覧", notes_path %></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <div class="container">
+    <footer class="footer">
+      <div class="small">
+        &copy; 2016 PIIQ.
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
